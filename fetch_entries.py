@@ -36,7 +36,11 @@ HAFTANIN_EN_BEGENILENLERI = "https://eksisozluk.com/istatistik/gecen-haftanin-en
 
 if __name__ == '__main__':
     import os
-    os.makedirs("data")
+    try:
+        os.makedirs("data")
+    except:
+        pass # already exists
+
     open("data/dun.json", "w").write(json.dumps(fetch_raw_entries(DUNUN_EN_BEGENILENLERI)))
     open("data/hafta.json", "w").write(json.dumps(fetch_raw_entries(HAFTANIN_EN_BEGENILENLERI)))
 
