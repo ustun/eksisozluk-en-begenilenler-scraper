@@ -1,0 +1,7 @@
+cssselect==0.9.1
+ipdb==0.8
+ipython==2.1.0
+lxml==3.3.5
+pyquery==1.2.8
+requests==2.3.0
+wsgiref==0.1.2
